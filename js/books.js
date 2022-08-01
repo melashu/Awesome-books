@@ -35,18 +35,6 @@ for (book of allBook) {
 
 btnRemove = document.querySelectorAll(".book .btn-remove");
 
-function removeBook(e) {
-  let parent = e.target.parentNode;
-  let elementIndex = e.target.id;
-  booklist.removeChild(parent);
-  const result = allBook.filter((book) => book != allBook[elementIndex]);
-  localStorage.setItem("ourbook", JSON.stringify(result));
-}
-
-btnRemove.forEach((remove) => {
-  remove.addEventListener("click", removeBook);
-});
-
 function addBook(event) {
   event.preventDefault();
   const bookTitle = title.value;
@@ -60,3 +48,16 @@ function addBook(event) {
 }
 
 form.addEventListener("submit", addBook);
+
+function removeBook(e) {
+  let parent = e.target.parentNode;
+  let elementIndex = e.target.id;
+  booklist.removeChild(parent);
+  const result = allBook.filter((book) => book != allBook[elementIndex]);
+  allBook = result;
+  localStorage.setItem("ourbook", JSON.stringify(result));
+}
+
+btnRemove.forEach((remove) => {
+  remove.addEventListener("click", removeBook);
+});
