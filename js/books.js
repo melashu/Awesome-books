@@ -3,24 +3,17 @@ const author = document.getElementById("author");
 const booklist = document.getElementsByClassName("book-list")[0];
 const form = document.getElementsByClassName("book-form")[0];
 
-let allBook = [
-  {
-    title: "Japan",
-    author: "Meshu",
-  },
-  {
-    title: "Japan",
-    author: "DADA",
-  },
-];
+let allBook = [];
 
+/**
+ *
+ */
 if (localStorage.getItem("ourbook") != null) {
   allBook = JSON.parse(localStorage.getItem("ourbook"));
 }
 
 let btnRemove;
 let index = 0;
-
 for (book of allBook) {
   const bookTemplate = `<div class="book">
         <p class="book-title">${book["title"]}</p>
@@ -28,6 +21,8 @@ for (book of allBook) {
         <button type="button" id="${index}" class="btn-remove">
     Remove
   </button>
+
+  <hr>
     </div>`;
 
   let domBook = new DOMParser().parseFromString(bookTemplate, "text/html");
@@ -38,17 +33,32 @@ for (book of allBook) {
 
 btnRemove = document.querySelectorAll(".book .btn-remove");
 
-btnRemove.forEach((remove) => {
-  remove.addEventListener("click", (e) => {
-    let parent = e.target.parentNode;
-    let elementIndex = e.target.id;
-    booklist.removeChild(parent);
+function removeBook(e) {
+      let parent = e.target.parentNode;
+      let elementIndex = e.target.id;
+      booklist.removeChild(parent);
+      const result = allBook.filter((book) => book != allBook[elementIndex]);
+      localStorage.setItem("ourbook", JSON.stringify(result));
+}
 
-    const result = allBook.filter((book) => book != allBook[elementIndex]);
-   
-  });
+btnRemove.forEach((remove) => {
+  remove.addEventListener("click", removeBook);
 });
 
+function addBook(event) {
+  event.preventDefault();
+  const bookTitle = title.value;
+  const bookAuthor = author.value;
 
+  let book = { title: bookTitle, author: bookAuthor };
 
+  const prev = JSON.parse(localStorage.getItem("ourbook")); // Tooks the previous book from localstorage
 
+  prev.push(book);
+
+  localStorage.setItem("ourbook", JSON.stringify(prev));
+
+  window.location.reload();
+}
+
+form.addEventListener("submit", addBook);
