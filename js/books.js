@@ -21,6 +21,8 @@ for (book of allBook) {
         <button type="button" id="${index}" class="btn-remove">
     Remove
   </button>
+<br/>
+<br/>
 
   <hr>
     </div>`;
@@ -34,11 +36,11 @@ for (book of allBook) {
 btnRemove = document.querySelectorAll(".book .btn-remove");
 
 function removeBook(e) {
-      let parent = e.target.parentNode;
-      let elementIndex = e.target.id;
-      booklist.removeChild(parent);
-      const result = allBook.filter((book) => book != allBook[elementIndex]);
-      localStorage.setItem("ourbook", JSON.stringify(result));
+  let parent = e.target.parentNode;
+  let elementIndex = e.target.id;
+  booklist.removeChild(parent);
+  const result = allBook.filter((book) => book != allBook[elementIndex]);
+  localStorage.setItem("ourbook", JSON.stringify(result));
 }
 
 btnRemove.forEach((remove) => {
@@ -51,13 +53,9 @@ function addBook(event) {
   const bookAuthor = author.value;
 
   let book = { title: bookTitle, author: bookAuthor };
-
   const prev = JSON.parse(localStorage.getItem("ourbook")); // Tooks the previous book from localstorage
-
   prev.push(book);
-
   localStorage.setItem("ourbook", JSON.stringify(prev));
-
   window.location.reload();
 }
 
