@@ -1,9 +1,24 @@
-input{
-    display: block;
-    padding: 10px;
-    margin: 15px;
-    width: 220px;
-    height: 40px;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  padding: 10px;
+  margin: 15px 0;
+  width: 320px;
+  height: 40px;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+.add-btn {
+  padding: 5px;
+
+}
