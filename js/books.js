@@ -40,7 +40,7 @@ function addBook(event) {
   const bookAuthor = author.value;
 
   const book = { title: bookTitle, author: bookAuthor };
-  const prev = JSON.parse(localStorage.getItem('ourbook')); // Tooks the previous book from localstorage
+  const prev = JSON.parse(localStorage.getItem('ourbook')) ?? []; // Tooks the previous book from localstorage
   prev.push(book);
   localStorage.setItem('ourbook', JSON.stringify(prev));
   window.location.reload();
