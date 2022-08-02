@@ -49,7 +49,7 @@ run: npx eslint .
 - GitHub: [@Alusp](https://github.com/Alusp)
 - LinkedIn: [@alusine-jalloh-873951209](linkedin.com/in/alusine-jalloh-873951209)
 
-👤 **Alusine Jalloh**
+👤 **Meshu**
 
 - Github:[@melashu](https://github.com/melashu)
 - Twitter: [@meshu102](https://twitter.com/meshu102)
