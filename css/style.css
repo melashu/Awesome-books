@@ -6,6 +6,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 ul {
   list-style: none;
 }
@@ -14,9 +15,6 @@ main {
   width: 80%;
   margin: 0 auto;
   height: 70vh;
-}
-.book h1 {
-  display: none;
 }
 
 table {
@@ -30,6 +28,10 @@ h1,
 h2 {
   text-align: center;
   width: 32%;
+}
+
+.book h1 {
+  display: none;
 }
 
 .btn-remove {
@@ -46,6 +48,7 @@ tr:nth-child(odd) {
   background: #ccc;
   padding: 28px;
 }
+
 tr:nth-child(even) {
   background: #fff;
   border: none;
@@ -64,7 +67,6 @@ td {
   background-color: #333;
   height: 3px;
   margin: 10px auto;
-
 }
 
 form {

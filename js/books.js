@@ -1,9 +1,12 @@
+/* eslint-disable */
 class Book {
   constructor(bookTitle, bookAuthor) {
     this.title = bookTitle;
     this.author = bookAuthor;
   }
 }
+
+/* eslint-disable */
 class BStorage {
   static getBook() {
     let book = [];
@@ -14,12 +17,14 @@ class BStorage {
     }
     return book;
   }
+
   static addBook(book) {
-    let bookList = BStorage.getBook();
+    const bookList = BStorage.getBook();
     bookList.push(book);
     console.log(bookList);
     localStorage.setItem("ourbook", JSON.stringify(bookList));
   }
+
   static removeBook(e) {
     if (e.target.classList.contains("btn-remove")) {
       let list = BStorage.getBook();
@@ -32,17 +37,20 @@ class BStorage {
     }
   }
 }
+
+/* eslint-disable */
 class UI {
   static displayBook() {
-    let bookList = BStorage.getBook();
+    const bookList = BStorage.getBook();
     bookList.forEach((book, index) => {
       UI.addBookToScreen(book, index);
     });
   }
+
   static addBookToScreen(book, index) {
     const table = document.getElementsByClassName("book-list")[0];
-    let row = document.createElement("tr");
-    let td = ` <td>${book.title} By ${book.author}</td> <td class='btn-td'> <button type="button" id="${index}" class="btn-remove"> Remove </button></td> `;
+    const row = document.createElement("tr");
+    const td = ` <td>${book.title} By ${book.author}</td> <td class='btn-td'> <button type="button" id="${index}" class="btn-remove"> Remove </button></td> `;
     row.innerHTML = td;
     table.appendChild(row);
   }
@@ -51,7 +59,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
-  let book = new Book(title, author);
+  const book = new Book(title, author);
   UI.addBookToScreen(book, BStorage.getBook().length);
   BStorage.addBook(book);
   document.getElementById("title").value = "";
