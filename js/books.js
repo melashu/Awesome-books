@@ -32,3 +32,19 @@ class BStorage {
     }
   }
 }
+class UI {
+  static displayBook() {
+    let bookList = BStorage.getBook();
+    bookList.forEach((book, index) => {
+      UI.addBookToScreen(book, index);
+    });
+  }
+  static addBookToScreen(book, index) {
+    document.querySelector(".book h1").style.display = "block";
+    const table = document.getElementsByClassName("book-list")[0];
+    let row = document.createElement("tr");
+    let td = ` <td>${book.title} By ${book.author}</td> <td class='btn-td'> <button type="button" id="${index}" class="btn-remove"> Remove </button></td> `;
+    row.innerHTML = td;
+    table.appendChild(row);
+  }
+}
