@@ -40,7 +40,6 @@ class UI {
     });
   }
   static addBookToScreen(book, index) {
-     
     const table = document.getElementsByClassName("book-list")[0];
     let row = document.createElement("tr");
     let td = ` <td>${book.title} By ${book.author}</td> <td class='btn-td'> <button type="button" id="${index}" class="btn-remove"> Remove </button></td> `;
@@ -55,8 +54,8 @@ document.querySelector("form").addEventListener("submit", (event) => {
   let book = new Book(title, author);
   UI.addBookToScreen(book, BStorage.getBook().length);
   BStorage.addBook(book);
-  document.getElementById("title").value = '';
-  document.getElementById("author").value = '';
+  document.getElementById("title").value = "";
+  document.getElementById("author").value = "";
 });
 document.addEventListener("DOMContentLoaded", UI.displayBook);
 document
