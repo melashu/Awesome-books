@@ -4,8 +4,56 @@
 }
 
 body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+main {
   width: 80%;
   margin: 0 auto;
+  height: 70vh;
+}
+.book h1 {
+  display: none;
+}
+
+table {
+  border: 4px solid #333;
+  width: 40%;
+  border-collapse: collapse;
+  font-weight: bold;
+}
+
+.btn-remove {
+  float: right;
+  border: 3px solid #333;
+  padding: 3px 10px 3px 3px;
+  margin: 5px;
+  font-weight: bold;
+  border-right: 5px solid #333;
+  border-bottom: 5px solid #333;
+}
+
+tr:nth-child(odd) {
+  background: #ccc;
+  padding: 28px;
+}
+tr:nth-child(even) {
+  background: #fff;
+  border: none;
+}
+
+td {
+  padding: 0 5px;
+}
+
+form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 input {
@@ -16,8 +64,15 @@ input {
   height: 40px;
   box-sizing: border-box;
   font-weight: bolder;
+  border: 5px solid #333;
 }
 
 .add-btn {
   padding: 5px;
+  text-align: center;
+  width: 50px;
+  border-right: 5px solid #333;
+  border-bottom: 5px solid #333;
+  font-weight: bold;
 }
+
