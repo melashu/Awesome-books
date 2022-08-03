@@ -20,10 +20,16 @@ main {
 }
 
 table {
-  border: 4px solid #333;
+  border: 2px solid #333;
   width: 40%;
   border-collapse: collapse;
   font-weight: bold;
+}
+
+h1,
+h2 {
+  text-align: center;
+  width: 40%;
 }
 
 .btn-remove {
@@ -46,7 +52,7 @@ tr:nth-child(even) {
 }
 
 td {
-  padding: 0 5px;
+  padding: 0 2px;
 }
 
 form {
@@ -64,7 +70,7 @@ input {
   height: 40px;
   box-sizing: border-box;
   font-weight: bolder;
-  border: 5px solid #333;
+  border: 3px solid #333;
 }
 
 .add-btn {
@@ -75,4 +81,3 @@ input {
   border-bottom: 5px solid #333;
   font-weight: bold;
 }
-
