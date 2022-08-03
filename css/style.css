@@ -29,7 +29,7 @@ table {
 h1,
 h2 {
   text-align: center;
-  width: 40%;
+  width: 32%;
 }
 
 .btn-remove {
@@ -53,6 +53,18 @@ tr:nth-child(even) {
 
 td {
   padding: 0 2px;
+}
+
+.divider-container {
+  width: 32%;
+}
+
+.divider {
+  width: 100px;
+  background-color: #333;
+  height: 3px;
+  margin: 10px auto;
+
 }
 
 form {
