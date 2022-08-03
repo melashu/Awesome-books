@@ -48,3 +48,15 @@ class UI {
     table.appendChild(row);
   }
 }
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  let book = new Book(title, author);
+  UI.addBookToScreen(book, BStorage.getBook().length);
+  BStorage.addBook(book);
+});
+document.addEventListener("DOMContentLoaded", UI.displayBook);
+document
+  .getElementsByClassName("book-list")[0]
+  .addEventListener("click", BStorage.removeBook);
