@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Project Name
 
 # Awesome-books-using-ES6
@@ -9,7 +7,7 @@
 
 ## Live Demo
 
-(See Live)[https://melashu.github.io/Awesome-books-usin-ES6/]
+[See Live](https://melashu.github.io/Awesome-books-usin-ES6/)
 
 ## Built With
 
