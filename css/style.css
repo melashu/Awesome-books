@@ -33,6 +33,15 @@ header li {
   border-right: 5px solid #333;
 }
 
+.date-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+#date {
+  font-weight: bold;
+}
+
 main {
   width: 80%;
   margin: 0 auto;
