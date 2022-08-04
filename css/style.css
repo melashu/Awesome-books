@@ -30,6 +30,7 @@ li {
   padding: 1px 18px;
   font-weight: bold;
 }
+
 header li {
   border-right: 5px solid #333;
 }
@@ -39,6 +40,7 @@ header li {
   justify-content: flex-end;
   padding: 8px;
 }
+
 #date {
   font-weight: bold;
 }
@@ -47,7 +49,6 @@ main {
   width: 80%;
   margin: 0 auto;
   min-height: 73vh;
-  padding: 0 auto;
 }
 
 .book {
@@ -84,6 +85,7 @@ tr:nth-child(odd) {
   background: #ccc;
   padding: 28px;
 }
+
 tr:nth-child(even) {
   background: #fff;
   border: none;
@@ -132,6 +134,7 @@ input {
   font-weight: bold;
   float: right;
 }
+
 .contact-me {
   display: none;
   flex-direction: column;
