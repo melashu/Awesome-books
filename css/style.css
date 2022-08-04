@@ -45,7 +45,8 @@ header li {
 main {
   width: 80%;
   margin: 0 auto;
-  height: 70vh;
+  min-height: 67vh;
+  padding: 0 auto;
 }
 
 table {
