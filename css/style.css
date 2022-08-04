@@ -11,6 +11,28 @@ ul {
   list-style: none;
 }
 
+header {
+  border: 4px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 15px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  padding: 1px 18px;
+  font-weight: bold;
+}
+header li {
+  border-right: 5px solid #333;
+}
+
 main {
   width: 80%;
   margin: 0 auto;
