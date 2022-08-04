@@ -82,3 +82,10 @@ document.querySelector(".add").addEventListener("click", (e) => {
   document.getElementsByClassName("contact-me")[0].style.display = "none";
   document.getElementsByClassName("add-book-list")[0].style.display = "flex";
 });
+
+document.querySelector(".contact").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementsByClassName("book")[0].style.display = "none";
+  document.getElementsByClassName("contact-me")[0].style.display = "flex";
+  document.getElementsByClassName("add-book-list")[0].style.display = "none";
+});
