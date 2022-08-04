@@ -7,8 +7,9 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-ul {
-  list-style: none;
+a {
+  text-decoration: none;
+  color: #333;
 }
 
 header {
@@ -48,6 +49,7 @@ main {
   min-height: 67vh;
   padding: 0 auto;
 }
+
 .book {
   display: flex;
   flex-direction: column;
